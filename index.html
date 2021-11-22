@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- INSERT FAVICON -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Scripts -->
+    <script src="scripts.js" defer></script>
+    <title>Glow Vibes Art</title>
+    <body>
+      <div class="page-container">
+        <header class="header" id="header">
+          <nav class="header__navigation">
+            <div class="header__logo logo">
+              <a class="header__logo-link" href="#">Glow Vibes Art</a>
+            </div>
+            <ul class="header__nav-links">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#header">About</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#demo">How it works</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#tutorial">Try it now</a>
+              </li>
+              <li class="header__nav-item header__contact-link">
+                <a class="header__nav-link header__contact-link" href="#contact"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div class="header__hamburger">
+              <span class="header__hamburger-bar"></span>
+              <span class="header__hamburger-bar"></span>
+              <span class="header__hamburger-bar"></span>
+            </div>
+          </nav>
+          <div class="header__content-container container">
+            <div class="header__text-content">
+              <h1 class="header__heading-1">Embrace Nostalgia</h1>
+              <p class="header__description">
+                If you grew up in the '90s, you're probably familiar with the
+                Lite Brite toy where you would place neon-colored, plastic pegs
+                on a glowing light board panel to create a lit design. Or maybe
+                you're familiar with the popular childhood craft where you
+                delicately place tiny beads on a pegboard and gently carry it
+                over an ironing board to fuse the beads together into a work of
+                art. Whatever your flavor of childhood nostalgia, we've got the
+                digital version ready for you to revisit the good times.
+              </p>
+              <div class="header__btn-container">
+                <a href="#" class="header__make-art-btn"
+                  >Make art now
+                  <i class="fa fa-palette header__palette-icon"></i
+                ></a>
+              </div>
+            </div>
+            <div class="header__images">
+              <img
+                class="header__icon-image"
+                src="images/icons/roller-skates.png"
+                alt="pair of roller skates"
+              />
+            </div>
+          </div>
+        </header>
+        <!-- Demo Video -->
+        <section class="demo__container demo container" id="demo">
+          <h2 class="demo__heading">See how it works!</h2>
+          <video width="70%" height="auto" controls class="demo__video">
+            <source src="" type="video/mp4" />
+            Your browser does not support this video content.
+          </video>
+          <div class="demo__btn-container">
+            <a href="#" class="demo__try-btn"
+              >Make your own art now <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </section>
+        <!-- Tutorial Section -->
+        <section class="tutorial__container" id="tutorial">
+          <div class="tutorial container">
+            <h2 class="tutorial__heading">Glow Art Tutorial</h2>
+
+            <div class="tutorial__content">
+              <div class="tutorial__row">
+                <div class="tutorial__instructions">
+                  <!-- Step 1 of Tutorial -->
+                  <div class="tutorial__stepnum">01</div>
+                  <p class="tutorial__description">
+                    Select a photo. Search for an image you'd like to recreate
+                    or to inspire your own creation. You can also choose an
+                    image from our library.
+                  </p>
+                </div>
+                <div class="tutorial__image-container">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="step 1 of tutorial"
+                    class="tutorial__image placeholder"
+                  />
+                </div>
+              </div>
+              <!-- Step 2 of Tutorial -->
+              <div class="tutorial__row tutorial__row--2">
+                <div
+                  class="tutorial__image-container tutorial__image-container--2"
+                >
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="step 2 of tutorial"
+                    class="tutorial__image placeholder"
+                  />
+                </div>
+                <div class="tutorial__instructions tutorial__instructions--2">
+                  <div class="tutorial__stepnum tutorial__stepnum--2">02</div>
+                  <p class="tutorial__description tutorial__description--2">
+                    Once you upload an image, we'll extract the major colors for
+                    your use! Simply click on which color you would like to use,
+                    and start clicking away.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3 of Tutorial -->
+              <div class="tutorial__row">
+                <div class="tutorial__instructions">
+                  <span class="tutorial__stepnum">03</span>
+                  <p class="tutorial__description">
+                    Use the colors to recreate the image on the pixel grid OR
+                    use the colors to get the creative juices flowing and make
+                    your own masterpiece!
+                  </p>
+                </div>
+                <div class="tutorial__image-container">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="step 3 of tutorial"
+                    class="tutorial__image placeholder"
+                  />
+                </div>
+              </div>
+              <div class="tutorial__btn">
+                <a href="#" class="tutorial__btn-link"
+                  >Get started now
+                  <i class="fa fa-palette tutorial__palette-icon"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+          <div class="contact__container container">
+            <h2 class="contact__heading">Meet the Creators</h2>
+            <!-- DALE SIMMONS CONTACT CARD -->
+            <div class="contact__card-container">
+              <div class="contact__card">
+                <div class="contact__image-container">
+                  <img
+                    src="images/profileimgs/dalepic.jpg"
+                    alt="Dale Simmons"
+                    class="contact__image"
+                  />
+                </div>
+                <div class="contact__card-text">
+                  <h3 class="contact__name">Dale Simmons</h3>
+                  <p class="contact__description">
+                    Software Engineer for Glow Vibes Art. Dale is driven by
+                    solving challenging problems and collaborating with a
+                    passionate team to build great things. He is currently
+                    interested in roles as a full-stack developer or software
+                    engineer, and he is open to relocating.
+                  </p>
+                  <div class="contact__social-links">
+                    <div class="contact__github-link contact__icon">
+                      <a href="https://github.com/Revlisc" target="_blank">
+                        <i class="fab fa-github contact__icon-link"></i>
+                      </a>
+                    </div>
+                    <div class="contact__linkedin-link contact__icon">
+                      <a
+                        href="https://www.linkedin.com/in/dalejsimmons/"
+                        target="_blank"
+                      >
+                        <i class="fab fa-linkedin-in contact__icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ARTHUR BAKER CONTACT CARD -->
+              <div class="contact__card">
+                <div
+                  class="contact__image-container contact__image-container--2"
+                ></div>
+                <div class="contact__card-text">
+                  <h3 class="contact__name">Arthur Baker</h3>
+                  <p class="contact__description">
+                    Full Stack Developer for Glow Vibes Art. Arthur is a music
+                    major turned web developer. He loves using problem solving
+                    skills and technical tools to produce elegant and functional
+                    solutions. He builds apps using React, MongoDB, Express,
+                    Node, React Native, and Expo.
+                  </p>
+                  <div class="contact__social-links">
+                    <div class="contact__github-link contact__icon">
+                      <a href="https://github.com/artbaker82" target="_blank">
+                        <i class="fab fa-github contact__icon-link"></i>
+                      </a>
+                    </div>
+                    <div class="contact__linkedin-link contact__icon">
+                      <a
+                        href="https://www.linkedin.com/in/arthur-baker-a88818188/"
+                        target="_blank"
+                      >
+                        <i class="fab fa-linkedin-in contact__icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BRIDGETT TAYLOR CONTACT CARD -->
+              <div class="contact__card">
+                <div
+                  class="contact__image-container contact__image-container--3"
+                ></div>
+                <div class="contact__card-text">
+                  <h3 class="contact__name">Bridgett Taylor</h3>
+                  <p class="contact__description">
+                    Designer for Glow Vibes Art. Bridgett is a recent bootcamp
+                    graduate from Nucamp's Frontend Web Development program. She
+                    enjoys taking website designs and challenging herself to
+                    write more efficient and responsive code each time. She is
+                    based in Spokane, WA but open to remote work.
+                  </p>
+                  <div class="contact__social-links">
+                    <div class="contact__github-link contact__icon">
+                      <a href="https://github.com/btaylor13" target="_blank">
+                        <i class="fab fa-github contact__icon-link"></i>
+                      </a>
+                    </div>
+                    <div class="contact__linkedin-link contact__icon">
+                      <a
+                        href="https://www.linkedin.com/in/bridgett-taylor-dev"
+                        target="_blank"
+                      >
+                        <i class="fab fa-linkedin-in contact__icon-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </body>
+  </head>
+</html>

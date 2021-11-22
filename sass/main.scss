@@ -1,0 +1,465 @@
+@import "base";
+@import "variables";
+
+body {
+  font-family: $ff-primary;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+}
+
+.container {
+  padding-inline: 2rem;
+  margin-inline: auto;
+  max-width: 85rem;
+}
+
+.header {
+  background-color: $color-purple-dark;
+  color: $color-white;
+  padding-bottom: 5rem;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-inline: 3rem;
+    padding-block: 2rem;
+  }
+
+  &__logo {
+    font-family: $ff-display;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  &__logo-link {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  &__nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  &__nav-item + &__nav-item {
+    margin-left: 2.5rem;
+  }
+
+  &__contact-link {
+    background-color: $color-purple-medium;
+    padding: 0.7em 1.7em;
+    border-radius: 3rem;
+  }
+
+  &__content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    padding-inline: 2rem;
+    margin-block: 9rem;
+  }
+
+  &__text-content {
+  }
+
+  &__heading-1 {
+    letter-spacing: 3px;
+    font-size: 3rem;
+    margin-bottom: 1.7rem;
+    text-shadow: 4px 4px 7px #b9aaaa;
+    line-height: 3.5rem;
+  }
+  &__description {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  &__images {
+    justify-self: center;
+    display: grid;
+  }
+  &__icon-image {
+    max-height: 313px;
+    margin: 0 auto;
+    justify-self: center;
+    align-self: center;
+  }
+  &__btn-container {
+    margin-top: 3rem;
+  }
+  &__make-art-btn {
+    background-color: $color-purple-medium;
+    padding: 0.7em 1.7em;
+    border-radius: 3rem;
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__palette-icon {
+    color: white;
+    z-index: 300;
+  }
+
+  &__hamburger {
+    display: none;
+    &-bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #101010;
+    }
+  }
+}
+
+// HEADER MEDIA QUERIES
+
+@media only screen and (max-width: 46rem) {
+  .header {
+    &__heading-1 {
+      font-size: 2.3rem;
+      line-height: 3rem;
+    }
+
+    &__logo {
+      font-size: 1.7rem;
+    }
+    &__nav-links {
+      flex-direction: column;
+      position: fixed;
+      top: 5rem;
+      left: -100%;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 0.3s;
+      background-color: $color-white;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      border-radius: 2rem 0 2rem 0;
+
+      padding-block: 3rem;
+      row-gap: 1rem;
+    }
+
+    &__nav-links.active {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    &__nav-link {
+      color: $color-purple-dark;
+    }
+
+    &__nav-item + &__nav-item {
+      margin-left: 0;
+    }
+
+    &__contact-link {
+      color: $color-white;
+    }
+
+    &__hamburger {
+      display: block;
+      cursor: pointer;
+
+      &-bar {
+        color: $color-white;
+        background-color: $color-white;
+      }
+      // Form close button for hamburger menu when active
+      &.active &-bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.active &-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      &.active &-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 34.9rem) {
+  .header {
+    &__content-container {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__text-content {
+      margin-bottom: 5rem;
+    }
+
+    &__heading-1 {
+      font-size: 2.1rem;
+    }
+
+    &__description {
+      font-size: 0.9rem;
+      line-height: 1.7rem;
+    }
+
+    &__icon-image {
+      max-height: 213px;
+    }
+  }
+}
+
+// DEMO VIDEO SECTION
+.demo {
+  margin-bottom: 3rem;
+  &__heading {
+    text-align: center;
+    margin-top: 2rem;
+    color: $color-purple-dark;
+    font-size: 2.3rem;
+    letter-spacing: 0.05em;
+    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.8);
+  }
+
+  &__video {
+    margin-top: 4rem;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4rem;
+  }
+
+  &__btn-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__try-btn {
+    margin: 0 auto;
+    text-align: center;
+    color: $color-purple-dark;
+  }
+}
+
+// DEMO MEDIA QUERIES
+
+// TUTORIAL SECTION
+.tutorial {
+  &__container {
+    background-color: $color-purple-light;
+  }
+
+  padding-block: 3rem;
+  &__heading {
+    text-align: center;
+    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5);
+    margin-bottom: 3rem;
+    font-size: 2.3rem;
+    letter-spacing: 0.03em;
+    color: $color-purple-dark;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    row-gap: 5rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__instructions {
+    // display: flex;
+
+    color: $color-purple-dark;
+  }
+
+  &__stepnum {
+    font-family: "Faster One", "Open Sans";
+    border-radius: 50%;
+    color: #120052;
+    background-color: white;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    line-height: 4.0625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    display: inline-block;
+    text-align: center;
+  }
+
+  &__description {
+    display: inline-block;
+  }
+
+  &__image-container {
+  }
+
+  &__image {
+  }
+
+  &__btn {
+    margin: 0 auto;
+    text-align: center;
+    color: $color-purple-dark;
+  }
+  &__btn-link {
+    color: $color-purple-dark;
+  }
+}
+// TUTORIAL MEDIA QUERIES
+@media only screen and (max-width: 44.9rem) {
+  .tutorial {
+    &__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+    }
+    &__instructions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      order: -1;
+    }
+    &__stepnum {
+      margin-bottom: 1rem;
+      &--2 {
+        order: -1;
+      }
+    }
+    &__description {
+      margin-bottom: 1rem;
+      &--2 {
+        order: 1;
+      }
+    }
+  }
+}
+
+// CONTACT US SECTION
+.contact {
+  background-color: $color-purple-medium;
+
+  &__container {
+    padding-block: 3rem;
+  }
+
+  &__heading {
+    margin-bottom: 3rem;
+    text-align: center;
+    color: $color-white;
+    letter-spacing: 0.11em;
+    font-size: 2.3rem;
+    text-shadow: 0px 4px 4px rgba(17, 6, 60, 0.44);
+  }
+
+  &__card {
+    background-color: $color-white;
+    max-width: 19rem;
+    border-radius: 13px;
+  }
+
+  &__card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+    justify-items: center;
+  }
+
+  &__image-container {
+    border-radius: 13px 13px 0 0;
+    &--2 {
+      background: url(images/profileimgs/arthur-pic.jpeg) center center;
+      background-size: cover;
+      height: 17rem;
+      width: 100%;
+    }
+    &--3 {
+      background: url(images/profileimgs/bridgett-pic.jpg) center center;
+      background-size: cover;
+      height: 17rem;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    height: 17rem;
+
+    border-radius: 13px 13px 0 0;
+    width: 100%;
+  }
+  &__card-text {
+    text-align: center;
+    width: 87%;
+    margin: 0 auto;
+    padding-block: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__name {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.08em;
+    color: $color-purple-dark;
+  }
+  &__description {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    color: #48397f;
+    letter-spacing: 0.02em;
+  }
+  &__social-links {
+    display: flex;
+    text-align: center;
+    column-gap: 2.5rem;
+    margin-top: 1.5rem;
+  }
+  &__icon {
+  }
+  &__icon-link {
+    color: $color-purple-dark;
+    z-index: 300;
+    font-size: 2rem;
+  }
+}
+// CONTACT US MEDIA QUERIES
+
+@media only screen and (max-width: 44.9rem) {
+  .contact {
+    &__card-container {
+      margin: 0 auto;
+    }
+    &__heading {
+      font-size: 2rem;
+    }
+  }
+}
