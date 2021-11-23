@@ -38,10 +38,10 @@
                 <a class="header__nav-link" href="#header">About</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#demo">Tutorial</a>
+                <a class="header__nav-link" href="#demo">Demo</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#tutorial">Try it now</a>
+                <a class="header__nav-link" href="#tutorial">Tutorial</a>
               </li>
               <li class="header__nav-item header__contact-link">
                 <a class="header__nav-link header__contact-link" href="#contact"
@@ -69,7 +69,9 @@
                 digital version ready for you to revisit the good times.
               </p>
               <div class="header__btn-container">
-                <a href="https://glowart.netlify.app/" class="header__make-art-btn"
+                <a
+                  href="https://glowart.netlify.app/"
+                  class="header__make-art-btn"
                   >Make art now
                   <i class="fa fa-palette header__palette-icon"></i
                 ></a>
@@ -82,9 +84,9 @@
                 alt="cartoon cassette tape"
               />
               <img
-                class='header__icon-image header__icon-cassette-px'
-                src='images/cassettePixelVersion2.jpg'
-                alt='our art version of a cassette tape'
+                class="header__icon-image header__icon-cassette-px"
+                src="images/cassettePixelVersion2.jpg"
+                alt="our art version of a cassette tape"
               />
             </div>
           </div>
@@ -92,10 +94,21 @@
         <!-- Demo Video -->
         <section class="demo__container demo container" id="demo">
           <h2 class="demo__heading">See how it works!</h2>
-          <video width="70%" height="auto" controls class="demo__video">
+          <div class="demo__video-wrapper"></div>
+          <iframe
+            class="demo__video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/unwz5EK3pJk?start=85&end=177"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <!-- <video width="70%" height="auto" controls class="demo__video">
             <source src="" type="video/mp4" />
             Your browser does not support this video content.
-          </video>
+          </video> -->
           <div class="demo__btn-container">
             <a href="https://glowart.netlify.app/" class="demo__try-btn"
               >Make your own art now <i class="fas fa-arrow-right"></i
@@ -166,7 +179,9 @@
                 </div>
               </div>
               <div class="tutorial__btn">
-                <a href="https://glowart.netlify.app/" class="tutorial__btn-link"
+                <a
+                  href="https://glowart.netlify.app/"
+                  class="tutorial__btn-link"
                   >Get started now
                   <i class="fa fa-palette tutorial__palette-icon"></i
                 ></a>
