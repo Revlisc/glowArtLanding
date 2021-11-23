@@ -257,23 +257,28 @@ body {
   }
 
   &__video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    margin-bottom: 7rem;
   }
 
   &__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     margin-top: 4rem;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 4rem;
-    width: 100%;
-    height: 100%;
+    margin-bottom: 5rem;
   }
 
   &__btn-container {
     margin: 0 auto;
     text-align: center;
   }
+
   &__try-btn {
     margin: 0 auto;
     text-align: center;
